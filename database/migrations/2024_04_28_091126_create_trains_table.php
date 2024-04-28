@@ -27,9 +27,11 @@ return new class extends Migration
             $table->string('company', 100);
             $table->string('start_station', 100);
             $table->string('end_station', 100);
-            $table->time('start_time');
-            $table->time('end_time');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
+            $table->decimal('price', 4);
             $table->string('code', 50)->nullable();
+            $table->unsignedTinyInteger('class');
             $table->unsignedTinyInteger('carriages_number')->nullable();
             $table->boolean('ontime');
             $table->boolean('canceled');
